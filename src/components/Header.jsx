@@ -1,35 +1,43 @@
 import Button from '@mui/material/Button';
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 
 function Header() {
-    const navigate = useNavigate()
+	const navigate = useNavigate();
 
-    const toHome = () => {
-        navigate('/')
-    }
+	function toHome() {
+		navigate('/');
+	}
 
-    const toContact = () => {
-        navigate('/contact')
-    }
+	function toContact() {
+		navigate('/contact');
+	}
 
-    const toGallery = () => {
-        navigate('/gallery')
-    }
+	function toGallery() {
+		navigate('/gallery');
+	}
 
-
-    return (
-        <div className="header">
-            <div className="header-left">
-            <div className='nav-item'><Button variant="text" sx={{color: 'white'}} onClick={toHome}>Home</Button></div>
-            <div className='nav-item'><Button variant="text" sx={{color: 'white'}} onClick={toGallery}>Gallery</Button></div>
-            <div className='nav-item'><Button variant="text" sx={{color: 'white'}} onClick={toContact}>Contact</Button></div>
-            </div>
-            <div className="header-center">
-            <p>Kora's View</p>
-            </div>
-            <div className="header-right"/>
-        </div>
-    )
+	return (
+		<div className='header'>
+			<div className='header-left'><p>Kora's View</p></div>
+			<div className='header-right'>
+				<div className='nav-item'>
+					<Button variant='contained' sx={{ color: 'white' }} onClick={toHome}>
+						Home
+					</Button>
+				</div>
+				<div className='nav-item'>
+					<Button variant='text' sx={{ color: 'white' }} onClick={toGallery}>
+						Gallery
+					</Button>
+				</div>
+				<div className='nav-item'>
+					<Button variant='text' sx={{ color: 'white' }} onClick={toContact}>
+						Contact
+					</Button>
+				</div>
+			</div>
+		</div>
+	);
 }
 
-export default Header
+export default Header;

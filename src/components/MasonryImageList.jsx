@@ -6,8 +6,8 @@ import ItemData from '../images/images'
 
 export default function MasonryImageList() {
   return (
-    <Box sx={{ overflowY: 'scroll' }}>
-      <ImageList variant="masonry" cols={3} gap={8}>
+    <Box>
+      <ImageList variant="masonry" cols={2} gap={3}>
         {ItemData.map((item) => (
           <ImageListItem key={item.img}>
             <img

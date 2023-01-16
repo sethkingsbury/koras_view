@@ -1,9 +1,4 @@
-const ItemData = [
-    {
-      img: require('./IMG_0000.jpeg'),
-      title: '0',
-    },
-  ];
+const ItemData = [];
 
 for (let i = 0; i < 10; i++) {
   ItemData.push({
