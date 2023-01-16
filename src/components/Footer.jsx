@@ -9,11 +9,11 @@ function Footer() {
     <div className="footer">
       <a href="https://www.facebook.com/profile.php?id=100031835604365"
         className="facebook social">
-        <FontAwesomeIcon icon={faFacebook} size="2x" />
+        <FontAwesomeIcon icon={faFacebook} size="4x" />
       </a>
       <a href="https://www.instagram.com/koras_view/"
         className="instagram social">
-        <FontAwesomeIcon icon={faInstagram} size="2x" />
+        <FontAwesomeIcon icon={faInstagram} size="4x" />
       </a>
     </div>
   )

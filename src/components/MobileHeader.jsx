@@ -16,7 +16,7 @@ function MobileHeader() {
 	};
 
 	const navItemStyle = {
-		'font-size': '1.4rem',
+		'font-size': '30px',
 		'font-family': '"Poiret One", cursive',
     'color': 'white',
 	};
@@ -49,7 +49,7 @@ function MobileHeader() {
 			</Button>
 
 			<button onClick={toggleNav}>
-				<RxHamburgerMenu color='white' size={'1.5em'} />
+				<RxHamburgerMenu color='white' size={'40px'} />
 			</button>
 
 			<ul className='nav-items' style={navStyle}>

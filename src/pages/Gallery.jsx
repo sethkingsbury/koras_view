@@ -3,7 +3,7 @@ import MasonryImageList from "../components/MasonryImageList"
 function Gallery() {
     return (
         <div className="container">
-            <h1 className="page-title">Gallery</h1>
+            <div className="page-title">Gallery</div>
             <div className="gallery">
                <MasonryImageList/>  
             </div>

@@ -4,7 +4,9 @@ import reviews from '../mockData/reviews'
 function Reviews () {
     return (
         <div className="container">
-            <h1>Reviews</h1>
+            <div className="page-title">
+                Reviews
+            </div>
             <Review review={reviews[0]}/>
             <Review review={reviews[1]}/>
             <Review review={reviews[2]}/>
