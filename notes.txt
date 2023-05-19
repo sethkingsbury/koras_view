@@ -1,0 +1,4 @@
+Responsive Design:
+
+Desktop > 1280px
+Mobile < 1280px

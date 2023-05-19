@@ -1,4 +1,5 @@
-import signImg from '../images/IMG_0008.jpeg'
+import imageData from '../images/images'
+import ImageGallery from '../components/ImageGallery'
 
 function Home() {
     return (
@@ -6,11 +7,11 @@ function Home() {
             <div className="blurb">
                 A Magical Place to Relax and Unwind
             </div>
-
-            {/* <p>An amazing place with sexy ginger girls who know how to throw it back - Seth</p> */}
             
-            <div className="parent">
-                <img className='home-image' src={signImg} alt="koras view" />
+            <ImageGallery imageData={imageData}/>
+
+            <div className="blurb-sml">
+                Situated in a picturesque setting overlooking the Hapuku River, the Manakau Peak and the Pacific Ocean.
             </div>
         </div>
     )

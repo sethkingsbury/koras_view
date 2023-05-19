@@ -75,14 +75,17 @@ p {
   width: 500px;
 }
 
-.parent {
+.image-container {
   width: 100%;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.home-image {
-  width: 100%;
+img {
+  width: auto;
   height: auto;
+  max-width: 100%;
 }
 
 /* Mobile Header */
@@ -103,7 +106,7 @@ p {
   /* Mobile Specific */
   position: fixed;
   right: 0;
-  top: 8.44rem;
+  top: 7rem;
   height: 100%;
   flex-direction: column;
   align-items: flex-start;
@@ -111,9 +114,6 @@ p {
   padding: 1rem 2rem;
   transition: 0.2s ease-out;
   z-index: 5;
-
-  border-left: 1px solid #646e77;
-  border-top: 1px solid #646e77;
 }
 
 .gallery {
@@ -170,6 +170,11 @@ a.instagram {
 .blurb {
   padding: 3rem 1rem;
   font-size:40px;
+}
+
+.blurb-sml {
+  padding: 3rem 1rem;
+  font-size: 18px;
 }
 
 .review {
