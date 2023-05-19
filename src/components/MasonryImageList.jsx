@@ -4,7 +4,8 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageData from '../images/images';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTimesCircle, faCircleLeft, faCircleRight } from '@fortawesome/free-regular-svg-icons';
+import { faTimesCircle } from '@fortawesome/free-regular-svg-icons';
+import { AiOutlineRight, AiOutlineLeft } from 'react-icons/ai';
 import '../styles/masonryImageList.css';
 import { useSwipeable } from 'react-swipeable';
 
@@ -53,16 +54,16 @@ export default function MasonryImageList({ isMobile }) {
       {selectedImage && (
         <Box className="overlay" {...handlers}>
           <Box className="close-button" onClick={closeImage}>
-            <FontAwesomeIcon icon={faTimesCircle} size="3x" />
+            <FontAwesomeIcon icon={faTimesCircle} size="2x" />
           </Box>
           <img src={selectedImage} alt="Selected" className="selected-image" />
           {!isMobile && (
             <>
               <button className="previous-button" onClick={navigateToPreviousImage}>
-                <FontAwesomeIcon icon={faCircleLeft} />
+                <AiOutlineLeft size={'40px'}/>
               </button>
               <button className="next-button" onClick={navigateToNextImage}>
-                <FontAwesomeIcon icon={faCircleRight} />
+                <AiOutlineRight size={'40px'}/>
               </button>
             </>
           )}
