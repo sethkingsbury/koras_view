@@ -38,7 +38,7 @@ export default function MasonryImageList({ isMobile }) {
           display="flex"
           justifyContent="center"
           alignItems="center"
-          backgroundColor="rgba(0, 0, 0, 0.95)"
+          backgroundColor="rgba(0, 0, 0, 0.80)"
           zIndex={9999}
         >
           <Box position="absolute" top={10} right={10}>
