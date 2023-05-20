@@ -1,0 +1,32 @@
+.mobile-header {
+  display: flex;
+  align-self: flex-start;
+  padding: 1rem 2rem;
+  justify-content: space-between;
+  align-items: center;
+  background: #22303C;
+}
+
+.nav-items {
+  display: flex;
+  list-style: none;
+
+  /* Mobile Specific */
+  position: fixed;
+  right: 0;
+  top: 3rem;
+  height: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #22303C;
+  padding: 1rem 2rem;
+  transition: 0.2s ease-out;
+  z-index: 5;
+}
+
+.mobile-header button {
+  background-color: #22303C;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}

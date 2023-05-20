@@ -1,0 +1,13 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer a {
+  margin: 0 10px 10px 10px;
+}
+
+.footer a.social {
+  color: #22303C;
+}
