@@ -49,7 +49,7 @@ function MobileHeader() {
 			</Button>
 
 			<button onClick={toggleNav}>
-				<RxHamburgerMenu color='white' size={'35px'} />
+				<RxHamburgerMenu color='white' size={'30px'} />
 			</button>
 
 			<ul className='nav-items' style={navStyle}>

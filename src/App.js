@@ -1,27 +1,45 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-// import Header from './components/Header'
+import { useState, useEffect } from 'react'
 import Home from './pages/Home.jsx'
 import Gallery from './pages/Gallery.jsx'
 import Reviews from './pages/Reviews';
 import Contact from './pages/Contact.jsx'
+import Header from './components/Header';
 import MobileHeader from './components/MobileHeader';
 import Footer from './components/Footer';
 
 function App() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(max-width: 991px)');
+    setIsMobile(mediaQuery.matches);
+
+    const handleMediaQueryChange = (event) => {
+      setIsMobile(event.matches);
+    };
+
+    mediaQuery.addEventListener('change', handleMediaQueryChange);
+
+    return () => {
+      mediaQuery.removeEventListener('change', handleMediaQueryChange);
+    };
+  }, []);
 
   return (
     <BrowserRouter>
-      <div className='main-container'>
-        {/* <Header/> */}
-        <MobileHeader/>
-        <Routes>
-          <Route path="/" element={<Home/>}/>
-          <Route path="/gallery" element={<Gallery/>}/>
-          <Route path="/reviews" element={<Reviews/>}/>
-          <Route path="/contact" element={<Contact/>}/>
-        </Routes>
-        <Footer/>
+      <div>
+        {isMobile ? <MobileHeader /> : <Header />}
+        <div className="routes-container">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/reviews" element={<Reviews />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </div>
+        <Footer />
       </div>
     </BrowserRouter>
   );

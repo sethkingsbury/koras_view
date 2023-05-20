@@ -1,0 +1,63 @@
+/* contact.css */
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-form {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 50px;
+}
+
+.contact-form.mobile {
+  /* Styles for mobile version */
+  /* Adjust the styles as per your requirements */
+}
+
+.contact-form.desktop {
+  /* Styles for desktop version */
+  /* Adjust the styles as per your requirements */
+}
+
+.contact-form div {
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.contact-form textarea {
+  height: 120px;
+}
+
+.contact-form button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #45a049;
+}
