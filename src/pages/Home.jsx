@@ -1,20 +1,20 @@
-import imageData from '../images/images'
-import ImageGallery from '../components/ImageGallery'
+import imageData from '../images/images';
+import '../styles/home.css';
 
 function Home() {
-    return (
-        <div className="container">
-            <div className="blurb">
-                A Magical Place to Relax and Unwind
-            </div>
-            
-            <ImageGallery imageData={imageData}/>
+  return (
+    <div>
+      <div className="page-title">
+        A Magical Place to Relax and Unwind
+      </div>
 
-            <div className="blurb-sml">
-                Situated in a picturesque setting overlooking the Hapuku River, the Manakau Peak and the Pacific Ocean.
-            </div>
-        </div>
-    )
+      <img className="home-image" src={imageData[6].img} alt="koras view" />
+
+      <div className="blurb">
+        Situated in a picturesque setting overlooking the Hapuku River, the Manakau Peak and the Pacific Ocean.
+      </div>
+    </div>
+  );
 }
 
-export default Home
+export default Home;

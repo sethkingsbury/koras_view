@@ -33,7 +33,7 @@ function App() {
       {isMobile ? <MobileHeader isMobile={isMobile} /> : <Header />}
       <div className="routes-container">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home isMobile={isMobile}/>} />
           <Route path="/gallery" element={<Gallery isMobile={isMobile} />} />
           <Route path="/reviews" element={<Reviews />} />
           <Route path="/contact" element={<Contact />} />
