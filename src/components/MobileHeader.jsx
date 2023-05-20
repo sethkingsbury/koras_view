@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Button from '@mui/material/Button';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { useNavigate } from 'react-router-dom';
+import '../styles/mobileHeader.css'
 
 function MobileHeader() {
 	const navigate = useNavigate();
@@ -16,9 +17,10 @@ function MobileHeader() {
 	};
 
 	const navItemStyle = {
-		'font-size': '25px',
-		'font-family': '"Poiret One", cursive',
-    'color': 'white',
+		fontSize: '25px',
+		fontFamily: '"Poiret One", cursive',
+		color: 'white',
+		textTransform: 'none'
 	};
 
 	const toHome = () => {
@@ -63,7 +65,7 @@ function MobileHeader() {
 					Reviews
 				</Button>
 				<Button variant='text' sx={navItemStyle} onClick={toContact}>
-					Contact Us
+					Contact
 				</Button>
 			</ul>
 		</div>

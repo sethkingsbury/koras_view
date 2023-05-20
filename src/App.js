@@ -28,21 +28,22 @@ function App() {
   }, []);
 
   return (
-    <BrowserRouter>
-      <div>
-        {isMobile ? <MobileHeader /> : <Header />}
-        <div className="routes-container">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/gallery" element={<Gallery />} />
-            <Route path="/reviews" element={<Reviews />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </div>
-        <Footer />
+  <BrowserRouter>
+    <div className="app">
+      {isMobile ? <MobileHeader isMobile={isMobile} /> : <Header />}
+      <div className="routes-container">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/gallery" element={<Gallery isMobile={isMobile} />} />
+          <Route path="/reviews" element={<Reviews />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
       </div>
-    </BrowserRouter>
-  );
+      <Footer />
+    </div>
+  </BrowserRouter>
+);
+
 }
 
 export default App;

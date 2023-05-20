@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import Button from '@mui/material/Button';
-import '../styles/header.css'; // Import the CSS file
+import '../styles/header.css';
 
 function Header() {
   const navigate = useNavigate();
