@@ -1,4 +1,3 @@
-import image from '../images/steven.webp'
 import '../styles/review.css'
 
 function Review({ review }) {

@@ -1,47 +1,49 @@
-import { useState } from "react";
+import React, { useState } from 'react';
 import '../styles/contact.css';
 
-function Contact() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+const ContactForm = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
 
-  const handleNameChange = (e) => {
-    setName(e.target.value);
+  const handleInputChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
-
-  const handleMessageChange = (e) => {
-    setMessage(e.target.value);
-  };
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Perform form submission logic here
-    // You can access the form data with the values of 'name', 'email', and 'message'
-    console.log("Name:", name);
-    console.log("Email:", email);
-    console.log("Message:", message);
-    // Reset form fields
-    setName("");
-    setEmail("");
-    setMessage("");
+    try {
+      const response = await fetch('http://localhost:3000/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+
+      const data = await response.json();
+      console.log('Success:', data);
+    } catch (error) {
+      console.error('Error:', error);
+    }
   };
 
   return (
+
     <div className="container">
       <div className="page-title">Contact Us</div>
+      <div className="blurb">Get in touch to arrange a booking directly with us. Let us know when you would like to stay and we will reply as soon as possible.</div>
       <form className="contact-form" onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="name">Name:</label>
           <input
             type="text"
             id="name"
-            value={name}
-            onChange={handleNameChange}
+            name="name"
+            value={formData.name}
+            onChange={handleInputChange}
             required
           />
         </div>
@@ -50,8 +52,9 @@ function Contact() {
           <input
             type="email"
             id="email"
-            value={email}
-            onChange={handleEmailChange}
+            name="email"
+            value={formData.email}
+            onChange={handleInputChange}
             required
           />
         </div>
@@ -59,15 +62,17 @@ function Contact() {
           <label htmlFor="message">Message:</label>
           <textarea
             id="message"
-            value={message}
-            onChange={handleMessageChange}
+            name="message"
+            value={formData.message}
+            onChange={handleInputChange}
             required
           ></textarea>
         </div>
-        <button type="submit">Submit</button>
-      </form>
+
+      <button type="submit">Submit</button>
+    </form>
     </div>
   );
-}
+};
 
-export default Contact;
+export default ContactForm;

@@ -4,10 +4,13 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Poiret One', cursive;
+  background: #F5F5F5;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .routes-container {
-  background: #F5F5F5;
+  background: none;
   padding: 20px 10%;
 }
 
@@ -15,7 +18,7 @@ body {
   width: 100%;
   max-width: 100%;
   min-height: 100vh;
-  background: #F5F5F5;
+  background: none;
 }
 
 .page-title {
@@ -30,4 +33,10 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+}
+
+.blurb {
+  text-align: center;
+  font-size: 3vh;
+  padding: 5vh 0;
 }

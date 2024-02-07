@@ -1,8 +1,8 @@
-import steven from '../images/steven.webp'
-import anita from '../images/anita.webp'
-import georgia from '../images/georgia.webp'
-import robert from '../images/robert.webp'
-import mandy from '../images/mandy.webp'
+import steven from '../images/review_images/steven.webp'
+import anita from '../images/review_images/anita.webp'
+import georgia from '../images/review_images/georgia.webp'
+import robert from '../images/review_images/robert.webp'
+import mandy from '../images/review_images/mandy.webp'
 
 const reviews = [
     {
