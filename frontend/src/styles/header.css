@@ -1,15 +1,15 @@
 .header {
   display: flex;
   align-self: flex-start;
-  padding: 1rem 2rem;
+  padding: 1rem 0;
   justify-content: space-between;
   align-items: center;
   background: #22303C;
+  width: 100%;
 }
 
 .header-left p {
   margin: 0 20px;
-  font-size: 25px;
   color: white;
   cursor: pointer;
 }

@@ -46,9 +46,9 @@ function MobileHeader() {
 
 	return (
 		<div className='mobile-header'>
-			<Button variant='text' sx={navItemStyle} onClick={toHome}>
-				Koras View
-			</Button>
+			<div className="header-left" onClick={toHome}>
+        <p>Kora's View</p>
+      </div>
 
 			<button onClick={toggleNav}>
 				<RxHamburgerMenu color='white' size={'30px'} />

@@ -5,6 +5,7 @@ import Home from './pages/Home.jsx'
 import Gallery from './pages/Gallery.jsx'
 import Reviews from './pages/Reviews';
 import Contact from './pages/Contact.jsx'
+import ContactSuccess from './pages/ContactSuccess.jsx'
 import Header from './components/Header';
 import MobileHeader from './components/MobileHeader';
 import Footer from './components/Footer';
@@ -37,6 +38,7 @@ function App() {
           <Route path="/gallery" element={<Gallery isMobile={isMobile} />} />
           <Route path="/reviews" element={<Reviews />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/contact-success" element={<ContactSuccess />} />
         </Routes>
       </div>
       <Footer />

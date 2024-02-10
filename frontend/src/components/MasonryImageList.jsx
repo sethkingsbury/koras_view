@@ -16,7 +16,7 @@ export default function MasonryImageList({ isMobile }) {
   const [selectedIndex, setSelectedIndex] = useState(null);
 
   const imageContext = require.context('../images/gallery_images', false, /\.(jpg|jpeg|png|gif)$/);
-  const [imageData, setImageData] = useState(importAllImages(imageContext));
+  const imageData = importAllImages(imageContext);
 
   const openImage = (image, index) => {
     setSelectedImage(image);

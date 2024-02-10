@@ -1,21 +1,31 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import Loading from '../components/Loading';
 import '../styles/contact.css';
 
-const ContactForm = () => {
+function ContactForm() {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: '',
   });
 
+  const [loading, setLoading] = useState(false)
+
   const handleInputChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const toSuccess = () => {
+    navigate('/contact-success');
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:3000/send-email', {
+      setLoading(true);
+      const response = await fetch(`https://test.korasview.com/send-email`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -24,17 +34,20 @@ const ContactForm = () => {
       });
 
       const data = await response.json();
+      toSuccess();
       console.log('Success:', data);
     } catch (error) {
       console.error('Error:', error);
     }
+    setLoading(false);
   };
 
   return (
 
     <div className="container">
-      <div className="page-title">Contact Us</div>
-      <div className="blurb">Get in touch to arrange a booking directly with us. Let us know when you would like to stay and we will reply as soon as possible.</div>
+      {loading && <Loading/>}
+      <h1>Contact</h1>
+      <p className="blurb">Get in touch to arrange a booking directly with us. Let us know when you would like to stay and we will reply as soon as possible.</p>
       <form className="contact-form" onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="name">Name:</label>
