@@ -1,0 +1,71 @@
+.header-container {
+    position: absolute;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    width: 100vw;
+    height: 150px;
+}
+
+.header-item {
+    margin: 0 20px
+}
+
+ul {
+    all: unset;
+}
+
+li {
+    all: unset;
+}
+
+.nav-menu {
+    position: absolute;
+    top: 0;
+    margin: 0;
+    margin-top: 150px;
+    padding-bottom: 20px;
+    background-color: #f2f2f2;
+    width: 100vw;
+}
+
+ul.nav-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+li.nav-item {
+    font-size: 20px;
+    padding: 20px 0;
+    margin: 0 20px;
+    width: 80%;
+    border-bottom: 1px solid #22303C;
+}
+
+.visible {
+    /* This timing applies on the way OUT */
+    transition-timing-function: ease-in;
+
+    /* Quick on the way out */
+    transition: 0.5s;
+
+    /* Hide thing by pushing it outside by default */
+    transform: translateY(0);
+}
+
+.hidden {
+    transition-timing-function: ease-out;
+
+    /* A litttttle slower on the way in */
+    transition: 0.75s;
+    
+    /* Move into place */
+    transform: translateY(-200%);
+}
